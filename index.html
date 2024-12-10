@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Rest Countries App</h1>
+
+        <!-- Input polje i dugme za pretragu -->
+        <div class="d-flex justify-content-center mt-4">
+            <input type="text" id="country-input" class="form-control mr-2" placeholder="Unesite naziv države">
+            <button id="search-button" class="btn btn-primary">Pretraži</button>
+        </div>
+
+        <!-- Sekcija koja sadrži podatke o zemlji, inicijalno je skrivena -->
+        <section id="country-info" class="mt-5" style="display: none;">
+            <div class="card">
+                <img id="country-flag" class="card-img-top container img-thumbnail" alt="Flag">
+                <div class="card-body">
+                    <h2 class="card-title country-name text-center display-4"></h2>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                            </tr>
+                            <tr>
+                                <th>Glavni grad:</th>
+                                <td id="country-capital"></td>
+                            </tr>
+                            <tr>
+                                <th>Populacija:</th>
+                                <td id="country-population"></td>
+                            </tr>
+                            <tr>
+                                <th>Region:</th>
+                                <td id="country-region"></td>
+                            </tr>
+                            <tr>
+                                <th>Valuta:</th>
+                                <td id="country-currency"></td>
+                            </tr>
+                            <th>Karta:</th>
+                            <td><a id="country-maps" href=""><span id="drzava"></span> map</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
