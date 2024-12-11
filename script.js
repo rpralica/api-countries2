@@ -56,15 +56,24 @@ function displayCountryData(country) {
   document.getElementById('country-population').textContent =
     country.population.toLocaleString();
   document.getElementById('country-region').textContent = country.region;
-  document.getElementById('country-currency').textContent = country.currencies ? Object.keys(country.currencies)[0] : 'N/A';
- document.getElementById('country-maps').href =country.maps.googleMaps;
- document.getElementById('drzava').textContent = ' '+country.name.common;
+  document.getElementById('country-currency').textContent = country.currencies
+    ? Object.keys(country.currencies)[0]
+    : 'N/A';
+  document.getElementById('country-maps').href = country.maps.openStreetMaps;
+  document.getElementById('drzava').textContent = ' ' + country.name.common;
 
-
+  const  name=Object.values(country.name.nativeName).map(native=>native.common).join(', '); 
   
+  //document.getElementById('country-spelings').textContent = result;
+  console.log( 'Ime ' + name);
 }
 
+
+
+
 // Dodavanje event listener-a na dugme za pretragu
+
+
 document.getElementById('search-button').addEventListener('click', () => {
   const countryName = document.getElementById('country-input').value.trim();
   if (countryName) {
@@ -73,5 +82,20 @@ document.getElementById('search-button').addEventListener('click', () => {
     alert('Molimo unesite naziv države!');
   }
 });
+fetchCountryData('bosnia');
 
 
+
+const books = {
+  book1: { title: '1984', author: 'George Orwell', year: 1949 },
+  book2: { title: 'Brave New World', author: 'Aldous Huxley', year: 1932 },
+};
+
+// Koristi Object.entries() da bi dobio niz parova [key, value]
+const titles = Object.entries(books).map(([key, value]) => value.author).join(',');
+
+console.log(titles);
+
+
+
+console.log('Knjige ' + titles);

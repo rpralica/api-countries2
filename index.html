@@ -20,17 +20,18 @@
 
         <!-- Sekcija koja sadrži podatke o zemlji, inicijalno je skrivena -->
         <section id="country-info" class="mt-5" style="display: none;">
+            <h2 class="card-title country-name text-center display-4"></h2>
             <div class="card">
                 <img id="country-flag" class="card-img-top container img-thumbnail" alt="Flag">
                 <div class="card-body">
-                    <h2 class="card-title country-name text-center display-4"></h2>
-                    <table class="table">
+
+                    <table class="table table-borderless">
                         <tbody>
                             <tr>
                             </tr>
                             <tr>
                                 <th>Glavni grad:</th>
-                                <td id="country-capital"></td>
+                                <td class="fw--bold" id="country-capital"></td>
                             </tr>
                             <tr>
                                 <th>Populacija:</th>
@@ -45,8 +46,9 @@
                                 <td id="country-currency"></td>
                             </tr>
                             <th>Karta:</th>
-                            <td><a id="country-maps" href=""><span id="drzava"></span> map</a></td>
+                            <td><a id="country-maps" href="" target="_blank"><span id="drzava"></span> map</a></td>
                             </tr>
+                        
                         </tbody>
                     </table>
                 </div>
@@ -59,6 +61,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+    
+
+
 </body>
 
 </html>
